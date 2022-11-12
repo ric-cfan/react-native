@@ -1,20 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View, ScrollView, Button, TouchableOpacity, Alert } from 'react-native';
+import {Gatinho} from './components/Gatinho/index.jsx'
+import {styles} from './styles'
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+        <Text style={styles.texto}>Hello World</Text>
+        <Gatinho nome="Fubá"/>
+        <Button title="Clique aqui" color="rgb(125, 123, 23)"/>
+        <TouchableOpacity onPress={Alert.alert("apertou")} style={styles.botao}><Text style={styles.texto}>Touchable Opacity</Text></TouchableOpacity>
     </View>
-  );
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
